@@ -1,0 +1,80 @@
+The following are my thoughts as I go through the features and their importance in predicting the thoughts of a home sale. 
+
+- MSSubClass could be included, but YearBuilt replaces this
+- Zoning is important, particularly Residential zoning
+- LotFrontage (feet of street connected) maybe wont be important, or connected with Zoning
+- LotArea is important 
+- Street not so much
+- Alley not so much
+- Lot Shape not so much
+- LandContour not so much
+- Utilities maybe (only AllPub-->hot coded?)
+- LotConfig maybe (only Cul-de-sac)?
+- Landslope not so much
+- Neighborhood is important (this could cover neighboring home values)
+- Conidtion1/2 important
+- BldgType is important
+- HouseStyle is important 
+- OverallQual is important 
+- OverallCond is important 
+- YearBuilt is important and is better than MSSubClass
+- YearRemodAdd is important
+- RoofStyle may not be 
+- RoofMatl may not be 
+- Exterior1st may not be
+- Exterior2nd may not be 
+- MassVnrType may not be 
+- ExterQual--> this could be made numerical
+- ExterCond --> this could be made numerical
+    -- maybe make a 'Exterior' vector and take the magnitude of it to compare
+- Foundation
+- BmstQual --> make numerical
+- BsmtCond --> make numerical
+- BsmtExposure I think Good exposure is outside access, minimum exposure is natural light access
+- BsmtFinType1 --> make numerical
+- BsmtFinSF1 is important
+- BsmtFinType2 --> make numerical
+- BsmtFinSF2 is important
+- BsmtUnfSF is important
+- TotalBsmtSF is important
+    -- Can we engineer some 'basement score'? Maybe the magnitude. Its almost like we should look at the difference of finished basement to unfinished basement and use that. 
+- Heating is important 
+- HeatingQC --> make numerical
+- CentralAir (hot-coded)
+- 1stFlrSF is important 
+- 2ndFlrSF is important 
+- LowQualFinSF is important (the more the less value it adds)
+- GrLivArea is important 
+- BsmtFullBath is important
+- BsmtHalfBath is important
+- FullBath is important
+- HalfBath is important
+- Bedroom is important
+- Kitchen is important
+- KitchenQual --> make numerical
+- TotRmsAbovGrd is important
+- Functional --> make numerical (seems extremely important)
+- Fireplaces is important
+- FireplaceQu is important
+- GarageType --> make numerical
+- GarageYrBuilt 
+- GarageFinish is important
+- GarageCars is important
+- GarageArea is important 
+- GarageQual --> make numerical
+- GarageCond --> make numerical
+    --similar to basement, make a Garage vector
+- WoodDeckSF maybe?
+- OpenPorch maybe?
+- EnclosedPorch maybe?
+- 3SsnPorch maybe?
+- ScreenPorch maybe? 
+- PoolArea: can be important
+- PoolQC --> make numerical
+- Fence --> make numerical
+- MiscFeature is not important
+- MiscVal is important 
+- MoSold can be important? like summer months are more popular? 
+- YrSold years with lower interests rates would have an impact on home sale
+- SaleType is important --> make numerical
+-SaleCOndition --> make numerical
